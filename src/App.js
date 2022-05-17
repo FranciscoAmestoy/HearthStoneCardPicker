@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home />} />
           <Route path="/cardpicker" exact element={<CardPicker />} />
           <Route path="/about" exact element={<About />} />
+          <Route path="/" exact element={<Home />} />
         </Routes>
       </Router>
     </div>

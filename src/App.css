@@ -30,7 +30,6 @@
 }
 
 .homeContainer {
-  /* text-align: justify; */
   margin-left: auto;
   margin-right: auto;
   width: 90vw;
@@ -79,283 +78,154 @@
   margin-top: 1.5vw;
 }
 
-.tituloCardPicker {
-  text-align: justify;
-  font-family: "Dancing Script", cursive;
-  font-size: 5vw;
-  width: 90vw;
-  height: 5vw;
-  margin-left: 2vw;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.cuerpoCardPicker {
+.cardPickerContainer {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16vw;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   width: 90vw;
 }
 
-.liCardPicker {
+.tituloCardPicker {
+  margin-top: 6vw;
+  font-family: "Dancing Script", cursive;
   font-size: 5vw;
-  font-weight: 600;
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: white;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.cargandoLinea {
+  position: absolute;
+  margin-left: -3.5vw;
+  margin-top: 0vh;
+  font-size: 4vw;
+  text-align: center;
   font-family: "Shadows Into Light", cursive;
 }
 
-.aboutContainer {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
+.filterContainer {
+  outline: 2px solid black;
+  height: 8vh;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-}
-
-.card img {
-  height: 50vw;
-}
-
-h3 {
-  margin-top: -3vw;
+  line-height: 7.5vh;
 }
 
 .cardList {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16vw;
-  width: 80vw;
-  height: 70vh;
-  border: 2px solid black;
-  text-align: center;
+  height: 55vh;
   overflow-y: scroll;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  padding: 0px;
+  outline: 2px solid black;
 }
 
 .cardList li {
-  font-size: 1.5vw;
+  font-size: 2vw;
+  margin-top: 1.5vh;
   font-weight: 600;
-  margin: 1vw;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  padding: 1vw;
   text-align: center;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  width: 30vw;
-  font-size: 4vw;
-  font-weight: 600;
   font-family: "Shadows Into Light", cursive;
+  display: inline-block;
+  width: 33.33%;
+}
+
+.cardList img {
+  margin: 0px;
+  padding: 0px;
+  width: 20vw;
+}
+
+.pagination {
+  margin: 0px;
+  padding: 0px;
+  line-height: 0px;
+  list-style: none;
+  display: flex;
+  overflow: scroll;
+}
+
+.pagination button {
+  margin: 0.1vw;
+  height: 3vh;
+  width: 5vw;
+}
+
+.pagination::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  margin-top: -2vw;
+}
+
+.tituloAbout {
+  font-size: 4vw;
+  font-family: "Dancing Script", cursive;
 }
 
 .footer {
-  text-align: center;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 3vw;
-  font-size: 4vw;
-  font-family: "Shadows Into Light", cursive;
+  font-size: 4.7vw;
   width: 90vw;
-  height: 3vw;
-}
-
-@media (min-width: 1000px) {
-  .card img {
-    height: 20vw;
-    margin-left: -2.5vw;
-    margin-top: -1vw;
-  }
-
-  h3 {
-    margin-top: -4vw;
-    font-size: 3vw;
-  }
-
-  .cardList {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3vw;
-    width: 80vw;
-    height: 40vh;
-    border: 2px solid black;
-    text-align: center;
-    overflow-y: scroll;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .cardList li {
-    margin-top: -2vw;
-    font-weight: 600;
-    margin: 1vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    padding: 1vw;
-    text-align: center;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    width: 8vw;
-    font-size: 1.3vw;
-    font-weight: 600;
-    font-family: "Shadows Into Light", cursive;
-  }
-
-  * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: transparent;
-    font-size: 6vw;
-  }
-
-  :root {
-    background-image: url(./images/backgroundTexture.jpg);
-    overflow-y: scroll;
-  }
-
-  .navBar {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .logo {
-    width: 25%;
-  }
-
-  .cardPickerLogo {
-    width: 100%;
-  }
-
-  .menuListContainer {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-items: center;
-    list-style: none;
-  }
-
-  .menu-list {
-    font-size: 6vw;
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-items: center;
-    list-style: none;
-    width: 100%;
-    z-index: 2000;
-  }
-
-  .homeButton {
-    width: 20vw;
-    position: absolute;
-    margin-left: -27vw;
-    z-index: 1000;
-  }
-
-  .cardPickerButton {
-    width: 20vw;
-    position: absolute;
-    z-index: 1000;
-  }
-
-  .aboutButton {
-    width: 20vw;
-    position: absolute;
-    margin-left: 27vw;
-    z-index: 1000;
-  }
-
-  .homeContainer {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    flex-direction: column;
-  }
-
-  .tituloHome {
-    font-size: 4vw;
-    width: 90vw;
-    font-family: "Dancing Script", cursive;
-  }
-
-  .tituloCardPicker {
-    text-align: justify;
-    font-family: "Dancing Script", cursive;
-    font-size: 5vw;
-    width: 90vw;
-    height: 5vw;
-    margin-left: 2vw;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .parrafoHome {
-    font-size: 4vw;
-    width: 90vw;
-    font-family: "Shadows Into Light", cursive;
-  }
-
-  .cuerpoCardPicker {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16vw;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-  }
-
-  .liCardPicker {
-    font-size: 5vw;
-    font-weight: 600;
-    font-family: "Shadows Into Light", cursive;
-  }
-
-  .aboutContainer {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-  }
-
-  .footer {
-    text-align: center;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 3vw;
-    font-size: 4vw;
-    font-family: "Shadows Into Light", cursive;
-    width: 90vw;
-    height: 3vw;
-  }
+  font-family: "Shadows Into Light", cursive;
 }

@@ -1,3 +1,5 @@
+Una app hecha en React con el objetivo de probar el uso de APIs de terceros, concretamente, [HearthStoneJson](https://hearthstonejson.com/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
