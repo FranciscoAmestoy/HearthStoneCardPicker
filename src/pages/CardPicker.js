@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards";
+import CardsTable from "../components/CardsTable";
 import Pagination from "../components/Pagination";
+import listView from "../images/listView.png";
+import picView from "../images/picView.png";
 
 const CardPicker = () => {
   const [cards, setCards] = useState([]);
@@ -8,6 +11,7 @@ const CardPicker = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [cardsPerPage] = useState(36);
   const [totalCards, setTotalCards] = useState(0);
+  const [viewType, setViewType] = useState(false);
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -35,7 +39,23 @@ const CardPicker = () => {
           A continuación encontrarás la lista completa de <br /> cartas
           HearthStone:
         </h3>
-        <div className="filterContainer">
+        <div className="filterControls">
+          <button>
+            <img
+              src={picView}
+              alt="picView"
+              onClick={() => setViewType(false)}
+            />
+          </button>
+          <button>
+            <img
+              src={listView}
+              alt="listView"
+              onClick={() => setViewType(true)}
+            />
+          </button>
+        </div>
+        <div className="paginationContainer">
           <Pagination
             cardsPerPage={cardsPerPage}
             totalCards={totalCards}
@@ -44,7 +64,11 @@ const CardPicker = () => {
         </div>
       </div>
       <div className="cardListContainer">
-        <Cards cards={currentCards} loading={loading} />
+        {viewType ? (
+          <CardsTable cards={currentCards} loading={loading} />
+        ) : (
+          <Cards cards={currentCards} loading={loading} />
+        )}
       </div>
     </div>
   );

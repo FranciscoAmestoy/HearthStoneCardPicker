@@ -161,11 +161,63 @@
   font-family: "Shadows Into Light", cursive;
 }
 
-.filterContainer {
+.filterControls {
   outline: 2px solid black;
-  height: 8vh;
   text-align: center;
   line-height: 7.5vh;
+}
+.filterControls button {
+  margin: 5px;
+}
+
+.filterControls button img {
+  width: 30px;
+  height: 30px;
+}
+
+.paginationContainer {
+  outline: 2px solid black;
+  text-align: center;
+  line-height: 7.5vh;
+}
+
+table {
+  width: 90vw;
+}
+
+table * {
+  margin: 0px;
+  padding: 0px;
+  outline: 1px solid black;
+}
+
+table li {
+  list-style-type: none; /*Esto rompe la tabla, por eso el siguiente truco: */
+}
+
+table li::before {
+  /*Truco para que los bullets sean invisibles */
+  content: "\2022";
+  color: transparent;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.searchBar{
+  position: absolute;
+  margin-top: -13.4vw;
+  margin-left: 2vw;
+  font-size: 2.5vw;
+  height: 3.5vw;
+}
+
+.searchBarTable{
+  position: absolute;
+  margin-top: -11.6vw;
+  margin-left: 2vw;
+  font-size: 2.5vw;
+  height: 3.5vw;
 }
 
 .cardList {
@@ -204,8 +256,8 @@
 
 .pagination button {
   margin: 0.1vw;
-  height: 3vh;
-  width: 5vw;
+  height: 35px;
+  width: 45px;
 }
 
 .pagination::-webkit-scrollbar {
